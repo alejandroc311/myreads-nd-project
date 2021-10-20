@@ -7,7 +7,6 @@ import { get, getAll,update } from "./BooksAPI";
 
 function  App() {
   const [bookLists, setBookLists] = useState(getAll());
-
   return (
     <Router>
       <Switch>
@@ -17,5 +16,4 @@ function  App() {
     </Router>
   );
 }
-
 export default App;
