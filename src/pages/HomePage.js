@@ -1,6 +1,6 @@
 import { update } from "../BooksAPI";
-function HomePage({bookLists}){
-    //TODO Figure out update function's parameters. Turn booklists props into array of objects by using ".then"
+function HomePage({bookList}){
+    console.log("Home Page Test:", bookList);
     return(
         <h2>Home Page</h2>
     )

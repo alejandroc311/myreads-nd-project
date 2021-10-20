@@ -1,5 +1,5 @@
 import { update } from "../BooksAPI";
-function SearchPage({bookLists}){
+function SearchPage({bookList}){
     return(
         <h2>Search Page</h2>
     );
