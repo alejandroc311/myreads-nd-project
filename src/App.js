@@ -6,16 +6,19 @@ import './App.css';
 import { get, getAll,update } from "./BooksAPI";
 
 function  App() {
-  const [bookList, setBookList] = useState(null);
   
+  const [bookList, setBookList] = useState([]);
+  const [wasListUpdated, setWasListUpdated] = useState(false);
+
+
   useEffect(() => {
-    if(bookList == null) getAll().then(results => setBookList(results));
-  }, [bookList])
+    if(bookList.length == 0) getAll().then(results => setBookList(results));
+  }, [wasListUpdated])
   return (
     <Router>
       <Switch>
         <Route  exact path="/" render={() => <HomePage bookList={bookList}/>}/>
-        <Route path="/search" render={() => <SearchPage bookList={bookList}/>}/>
+        <Route path="/search" render={() => <SearchPage updateHandler={setWasListUpdated} bookList={bookList}/>}/>
       </Switch>
     </Router>
   );

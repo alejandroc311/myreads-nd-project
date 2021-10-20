@@ -1,5 +1,6 @@
 import { update } from "../BooksAPI";
 function HomePage({bookList}){
+    console.log("Home Page Test:", bookList);
     const books = bookList.map(({id, shelf})=>{
         return(
             <h2>
