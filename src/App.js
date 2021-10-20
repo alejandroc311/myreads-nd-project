@@ -6,7 +6,7 @@ import './App.css';
 import { get, getAll,update } from "./BooksAPI";
 
 function  App() {
-  const [bookLists, setBookLists] = useState(getAll());
+  const [bookLists, setBookLists] = useState(getAll().then(results => results));
   return (
     <Router>
       <Switch>
