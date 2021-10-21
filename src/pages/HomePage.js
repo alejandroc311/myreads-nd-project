@@ -1,7 +1,8 @@
 import { update } from "../BooksAPI";
+import {responsive} from "../constants"
 import * as React from "react";
-import GliderComponent from "react-glider";
-import Slider from "react-slick";
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 import BookDisplay from "./components/BookDisplay";
 function HomePage({bookList}){
     console.log("Home Page Test:", bookList);
@@ -10,56 +11,19 @@ function HomePage({bookList}){
             <BookDisplay book={book}/>
         );
     });
-    let settings = {
-        arrows: true,
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        initialSlide: 0,
-        responsive: [
-          {
-            breakpoint: 992,
-            settings: {
-              arrows: true,
-              slidesToShow: 3,
-              slidesToScroll: 3,
-              infinite: true,
-              dots: true
-            }
-          },
-          {
-            breakpoint: 772,
-            settings: {
-              arrows: true,
-              dots: true,
-              infinite: true,
-              speed: 500,
-              slidesToShow: 2,
-              slidesToScroll: 2,
-              initialSlide: 1
-            }
-          },
-          {
-            breakpoint: 600,
-            settings: {
-                arrows: true,
-                dots: true,
-                infinite: true,
-                speed: 500,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                centerMode: true
-            }
-          }
-        ]
-      };
+    
     return(
-        <div className="container">
-            <Slider {...settings}>
+        <div className="container-fluid">
+            <Carousel 
+             swipeable={true}
+             draggable={true}
+             showDots={true}
+             responsive={responsive}
+             infinite={true}
+             centerMode={true}
+            >
                 {books}        
-            </Slider>
+            </Carousel>
         </div>
                         
     )
