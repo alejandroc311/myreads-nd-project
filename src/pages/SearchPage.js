@@ -16,7 +16,9 @@ function SearchPage({bookList, updateHandler}){
     
     useEffect(()=> {
         console.log("The User Input and Results: ", userInput, searchResults);
-        if(!searchResults || searchResults.error == "empty query") {console.log("Search Results are undefined.")}
+        let error;
+        !searchResults ? error = null : {error: error = null} = searchResults 
+        if(!searchResults || error) {}
     }, [userInput, searchResults]);
     return(
         <SearchPageForm onSubmit={handleSubmit} onChange={handleChange} userInput={userInput}/>

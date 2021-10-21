@@ -12,7 +12,7 @@ function  App() {
 
 
   useEffect(() => {
-    if(bookList.length == 0) getAll().then(results => setBookList(results));
+    getAll().then(results => setBookList(results));
   }, [wasListUpdated])
   return (
     <Router>

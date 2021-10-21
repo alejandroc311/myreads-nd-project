@@ -1,23 +1,67 @@
 import { update } from "../BooksAPI";
+import * as React from "react";
+import GliderComponent from "react-glider";
+import Slider from "react-slick";
+import BookDisplay from "./components/BookDisplay";
 function HomePage({bookList}){
     console.log("Home Page Test:", bookList);
-    const books = bookList.map(({id, shelf})=>{
+    const books = bookList.map((book)=>{
         return(
-            <h2>
-                Book Id: {id} and Book Status: {shelf}
-            </h2>
+            <BookDisplay book={book}/>
         );
     });
+    let settings = {
+        arrows: true,
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        initialSlide: 0,
+        responsive: [
+          {
+            breakpoint: 992,
+            settings: {
+              arrows: true,
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 772,
+            settings: {
+              arrows: true,
+              dots: true,
+              infinite: true,
+              speed: 500,
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              initialSlide: 1
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+                arrows: true,
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                centerMode: true
+            }
+          }
+        ]
+      };
     return(
-        <div className="container-fluid">
-            <div className="row">
-                <div className="col">
-                    <div className="card">
-                        {books}
-                    </div>
-                </div>
-            </div>
+        <div className="container">
+            <Slider {...settings}>
+                {books}        
+            </Slider>
         </div>
+                        
     )
 }
 
