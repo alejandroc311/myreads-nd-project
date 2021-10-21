@@ -17,11 +17,12 @@ function SearchPage({bookList, updateHandler}){
     useEffect(()=> {
         console.log("The User Input and Results: ", userInput, searchResults);
         let error;
-        !searchResults ? error = null : {error: error = null} = searchResults 
+        !searchResults ? error = null : {error: error = null} = searchResults; 
         if(!searchResults || error) {}
     }, [userInput, searchResults]);
     return(
         <SearchPageForm onSubmit={handleSubmit} onChange={handleChange} userInput={userInput}/>
+        
     );
 }
 export default SearchPage;

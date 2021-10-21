@@ -3,7 +3,7 @@ function BookDisplay({book}){
     return(
         <div className="card">
             <img className="card-img-top" src={smallThumbnail}>
-
+                
             </img>
             <div className="card-body">
 

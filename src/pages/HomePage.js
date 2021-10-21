@@ -1,29 +1,15 @@
 import { update } from "../BooksAPI";
-import {responsive} from "../constants"
-import * as React from "react";
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
-import BookDisplay from "./components/BookDisplay";
+import BookShelf from "./components/BookShelf";
 function HomePage({bookList}){
     console.log("Home Page Test:", bookList);
-    const books = bookList.map((book)=>{
-        return(
-            <BookDisplay book={book}/>
-        );
-    });
     
+    //TODO add three carousels to represent each shelf. Map through results to place them in the correct shelf
+    //add headers to identify each shelf/carousel. 
+    //maybe compose the shelf/carousel and then only call it instead of declaring it thrice? 
     return(
+    
         <div className="container-fluid">
-            <Carousel 
-             swipeable={true}
-             draggable={true}
-             showDots={true}
-             responsive={responsive}
-             infinite={true}
-             centerMode={true}
-            >
-                {books}        
-            </Carousel>
+            
         </div>
                         
     )

@@ -1,7 +1,4 @@
-.card {
-  width: 24rem!important;
-  height: 28rem;
-}
+
 .card-img-top{
   height: 24rem;
 }
@@ -9,8 +6,8 @@
   margin-top: 1rem;
   padding-bottom: 2rem;
 } 
-.react-multi-carousel-item{
-  margin: 0 3.75rem;
+.bookShelfBookDisplay{
+  margin: 0 2rem;
 }
 .react-multi-carousel-dot-list{
   z-index: 1;
