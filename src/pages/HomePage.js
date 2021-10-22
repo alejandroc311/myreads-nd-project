@@ -9,7 +9,7 @@ function HomePage({bookList}){
     return(
     
         <div className="container-fluid">
-            
+            <BookShelf filteredBookList={bookList} bookShelfHeader={"All"}/>
         </div>
                         
     )

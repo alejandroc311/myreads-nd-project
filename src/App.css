@@ -1,4 +1,6 @@
-
+.card-body{
+  font-size: 0.875rem;
+}
 .card-img-top{
   height: 24rem;
 }
@@ -12,4 +14,9 @@
 .react-multi-carousel-dot-list{
   z-index: 1;
   bottom: 0%;
+}
+h2{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.25rem;
+  text-decoration-color: darkgrey;
 }

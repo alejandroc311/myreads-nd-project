@@ -1,14 +1,10 @@
-import {responsive} from "../constants"
+import {responsive} from "./../../constants"
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import BookDisplay from "./components/BookDisplay";
-
+import BookDisplay from "./BookDisplay";
 function BookShelf({bookShelfHeader, filteredBookList}){
-    const books = filteredBookList.map((book)=>{
-        return(
-            <BookDisplay book={book}/>
-        );
-    });
+    console.log("Book List being passed down to Shelf: ",filteredBookList)
+    const books = filteredBookList.map(book => <BookDisplay book={book}/>)
     return(
         <div>
             <div className="container-fluid">
