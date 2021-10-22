@@ -1,3 +1,12 @@
+h2{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+  text-decoration-color: lightgray;
+  margin: 1rem 0;
+}
+.card{
+  width:20rem;
+}
 .card-body{
   font-size: 0.875rem;
 }
@@ -8,15 +17,11 @@
   margin-top: 1rem;
   padding-bottom: 2rem;
 } 
-.bookShelfBookDisplay{
-  margin: 0 2rem;
+.react-multi-carousel-track{
+  padding-block: 2rem;
 }
 .react-multi-carousel-dot-list{
   z-index: 1;
   bottom: 0%;
 }
-h2{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1.25rem;
-  text-decoration-color: darkgrey;
-}
+

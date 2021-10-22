@@ -1,8 +1,4 @@
-function BookDisplay({book}){
-    console.log(book);
-    const {imageLinks: {smallThumbnail} = "", title, authors = []} = book ;
-    console.log("Book being passed down from shelf: ", book);
-
+function BookDisplay({book:{imageLinks: {smallThumbnail} = "", title, authors = []}}){
     function getAuthorsList() {
         return(authors.length == 0 ? 
             <div className="card-text">{"No Author Available"}</div>

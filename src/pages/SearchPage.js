@@ -28,12 +28,9 @@ function SearchPage({bookList, updateHandler}){
                     searchResults.length ? 
                             <BookShelf filteredBookList={searchResults} bookShelfHeader={"Search Results"} />
                         :
-                            <h2>
-                                No search results ... 
-                                <br></br>
-                                Try starting a new search or changing your current search
-                            </h2>
-            }
+                            <h2>No search results ... Try starting a new search or changing your current search</h2>
+            
+            }   
             
         </div>
         

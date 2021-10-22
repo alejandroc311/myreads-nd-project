@@ -3,7 +3,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import BookDisplay from "./BookDisplay";
 function BookShelf({bookShelfHeader, filteredBookList}){
-    console.log("Book List being passed down to Shelf: ",filteredBookList)
+    console.log("Book List being passed down to Shelf: ", filteredBookList)
     const books = filteredBookList.map(book => <BookDisplay book={book}/>)
     return(
         <div>
@@ -21,7 +21,6 @@ function BookShelf({bookShelfHeader, filteredBookList}){
                     responsive={responsive}
                     infinite={true}
                     centerMode={true}
-                    itemClass={"bookShelfBookDisplay"}
                 >
                 {books}        
             </Carousel>
