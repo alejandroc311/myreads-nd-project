@@ -1,6 +1,6 @@
 function BookDisplay({book}){
     console.log(book);
-    const {imageLinks: {smallThumbnail}, title, authors = []} = book;
+    const {imageLinks: {smallThumbnail} = "", title, authors = []} = book ;
     console.log("Book being passed down from shelf: ", book);
 
     function getAuthorsList() {
