@@ -1,11 +1,11 @@
-function BookDisplay({book:{imageLinks: {smallThumbnail} = "", title, authors = []}}){
+function BookDisplay({book:{imageLinks: {smallThumbnail} = "", title, authors = [], shelf = "none"}}){
     function getAuthorsList() {
         return(authors.length == 0 ? 
             <div className="card-text">{"No Author Available"}</div>
         :
             authors.map((author) => {
                 return(
-                    <div className="card-text">{"Author: " + author}</div>
+                    <div key={author} className="card-text">{"Author: " + author}</div>
                 );
             })
         );
@@ -20,6 +20,7 @@ function BookDisplay({book:{imageLinks: {smallThumbnail} = "", title, authors = 
                 {getAuthorsList()}
             </div>
             <div className="card-footer">
+                //MAKE SELECT MENU TO TOGGLE OPTIONS
                 <button className="btn bi bi-three-dots"></button>
             </div>
         </div>

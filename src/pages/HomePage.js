@@ -5,7 +5,6 @@ import { READ } from "../constants";
 import {Link} from "react-router-dom";
 import BookShelf from "./components/BookShelf";
 function HomePage({bookList, updateHandler}){
-    console.log("Home Page Test:", bookList);
     const currentlyReadingList = bookList.filter(({shelf}) => shelf == CURRENTLY_READING);
     const wantToReadList = bookList.filter(({shelf}) => shelf == WANT_TO_READ);
     const readList = bookList.filter(({shelf}) => shelf == READ)
