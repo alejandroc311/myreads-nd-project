@@ -1,7 +1,8 @@
-import { update } from "../BooksAPI";
+import React from "react";
 import { CURRENTLY_READING } from "../constants";
 import { WANT_TO_READ } from "../constants";
 import { READ } from "../constants";
+import {Link} from "react-router-dom";
 import BookShelf from "./components/BookShelf";
 function HomePage({bookList}){
     console.log("Home Page Test:", bookList);
@@ -12,6 +13,7 @@ function HomePage({bookList}){
     return(
     
         <div>
+            <Link className="btn bi bi-search my-3" to="/search"><p className="fw-light fs-6">Explore new books!</p></Link>
             <BookShelf filteredBookList={currentlyReadingList} bookShelfHeader={"Currently Reading"}/>
             <BookShelf filteredBookList={wantToReadList} bookShelfHeader={"Want to Read"}/>
             <BookShelf filteredBookList={readList} bookShelfHeader={"Read"}/>

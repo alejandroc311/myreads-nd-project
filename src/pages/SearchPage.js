@@ -23,12 +23,12 @@ function SearchPage({bookList, updateHandler}){
             <SearchPageForm onSubmit={handleSubmit} onChange={handleChange} userInput={userInput}/>
             {
                 searchResults === undefined ? 
-                    <h2>No search results ... Try starting a new search or changing your current search</h2>
+                    <p className="fw-light fs-4">No search results ... Try starting a new search or changing your current search</p>
                 :
                     searchResults.length ? 
                             <BookShelf filteredBookList={searchResults} bookShelfHeader={"Search Results"} />
                         :
-                            <h2>No search results ... Try starting a new search or changing your current search</h2>
+                            <p className="fw-light fs-4">No search results ... Try starting a new search or changing your current search</p>
             
             }   
             

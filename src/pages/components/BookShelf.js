@@ -7,12 +7,9 @@ function BookShelf({bookShelfHeader, filteredBookList}){
     const books = filteredBookList.map(book => <BookDisplay book={book}/>)
     return(
         <div>
+    
             <div className="container-fluid">
-                <h2>
-                    {bookShelfHeader}
-                </h2>
-            </div>
-            <div className="container-fluid">
+                <p className="fw-light fs-4">{bookShelfHeader}</p>
                 <Carousel
                     arrows={true} 
                     swipeable={true}

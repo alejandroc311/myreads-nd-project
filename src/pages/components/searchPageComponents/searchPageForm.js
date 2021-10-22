@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { search } from "../../../BooksAPI";
+import { Link } from "react-router-dom";
 import SearchPageInput from "./searchPageSubComponents/searchPageInput";
 function SearchPageForm({onSubmit, userInput, onChange}){
     function handleSubmit(event){
@@ -11,8 +10,11 @@ function SearchPageForm({onSubmit, userInput, onChange}){
     }
     return(
         <form onSubmit={handleSubmit}>
-            <div className="container">
+            <div className="container-fluid">
                 <div className="row d-flex justify-content-center">
+                    <div className="col-2 d-flex justify-content-center align-items-center">
+                        <Link className="btn bi bi-arrow-left" to="/"></Link>
+                    </div>
                     <div className="col-10">
                         <SearchPageInput userInput={userInput} onChange={handleChange}/>
                     </div>
