@@ -1,4 +1,4 @@
-import {responsive} from "./../../constants"
+import {RESPONSIVE} from "./../../constants"
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import BookDisplay from "./BookDisplay";
@@ -18,8 +18,8 @@ function BookShelf({bookShelfHeader, filteredBookList}){
                     swipeable={true}
                     draggable={true}
                     showDots={true}
-                    responsive={responsive}
-                    infinite={true}
+                    responsive={RESPONSIVE}
+                    infinite={false}
                     centerMode={true}
                 >
                 {books}        

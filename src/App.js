@@ -12,7 +12,6 @@ function  App() {
   function handleUpdate(){
     setWasListUpdated(++wasListUpdated);
   }
-
   useEffect(() => {
     getAll().then(results => setBookList(results));
   }, [wasListUpdated])

@@ -1,4 +1,4 @@
-export const responsive = {
+export const RESPONSIVE = {
     desktop: {
       breakpoint: { max: 3000, min: 1200 },
       items: 3,
@@ -20,3 +20,7 @@ export const responsive = {
         slidesToSlide: 1,
     }
   };
+
+  export const CURRENTLY_READING = "currentlyReading";
+  export const WANT_TO_READ = "wantToRead";
+  export const READ = "read";
