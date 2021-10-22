@@ -14,6 +14,9 @@ function SearchPage({bookList, updateHandler}){
         setUserInput("");
         console.log(userInput, searchResults);
     }
+    function handleUpdate(){
+        updateHandler();
+    }
     
     useEffect(()=> {
         console.log("The User Input and Results: ", userInput, searchResults);
@@ -26,7 +29,7 @@ function SearchPage({bookList, updateHandler}){
                     <p className="fw-light fs-4">No search results ... Try starting a new search or changing your current search</p>
                 :
                     searchResults.length ? 
-                            <BookShelf filteredBookList={searchResults} bookShelfHeader={"Search Results"} />
+                            <BookShelf filteredBookList={searchResults} updateHandler={handleUpdate} bookShelfHeader={"Search Results"} />
                         :
                             <p className="fw-light fs-4">No search results ... Try starting a new search or changing your current search</p>
             

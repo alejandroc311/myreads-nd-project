@@ -8,12 +8,13 @@ import { get, getAll,update } from "./BooksAPI";
 function  App() {
   
   const [bookList, setBookList] = useState([]);
-  const [wasListUpdated, setWasListUpdated] = useState(0);
+  let [wasListUpdated, setWasListUpdated] = useState(0);
   function handleUpdate(){
     setWasListUpdated(++wasListUpdated);
   }
   useEffect(() => {
     getAll().then(results => setBookList(results));
+    console.log(wasListUpdated);
   }, [wasListUpdated])
   return (
     <Router>
