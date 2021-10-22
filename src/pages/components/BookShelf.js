@@ -10,11 +10,9 @@ function BookShelf({bookShelfHeader, filteredBookList, updateHandler}){
     const books = filteredBookList.map(book => <BookDisplay key={book.id} updateHandler={handleUpdate} book={book}/>);
     return(
         <div>
-    
             <div className="container-fluid">
                 <p className="fw-light fs-4">{bookShelfHeader}</p>
                 <Carousel
-                   
                     arrows={true} 
                     swipeable={true}
                     draggable={true}
@@ -23,7 +21,7 @@ function BookShelf({bookShelfHeader, filteredBookList, updateHandler}){
                     infinite={false}
                     centerMode={true}
                 >
-                {books}        
+                    {books}        
             </Carousel>
             </div>
         </div>
