@@ -29,7 +29,7 @@ function SearchPage({bookList, updateHandler}){
                     <p className="fw-light fs-4">No search results ... Try starting a new search or changing your current search</p>
                 :
                     searchResults.length ? 
-                            <BookShelf filteredBookList={searchResults} updateHandler={handleUpdate} bookShelfHeader={"Search Results"} />
+                            <BookShelf currentList={bookList} filteredBookList={searchResults} updateHandler={handleUpdate} bookShelfHeader={"Search Results"} />
                         :
                             <p className="fw-light fs-4">No search results ... Try starting a new search or changing your current search</p>
             

@@ -16,9 +16,9 @@ function HomePage({bookList, updateHandler}){
     
         <div>
             <Link className="btn bi bi-search my-3" to="/search"><p className="fw-light fs-6">Explore new books!</p></Link>
-            <BookShelf filteredBookList={currentlyReadingList} updateHandler={handleUpdate} bookShelfHeader={"Currently Reading"}/>
-            <BookShelf filteredBookList={wantToReadList} updateHandler={handleUpdate} bookShelfHeader={"Want to Read"}/>
-            <BookShelf filteredBookList={readList} updateHandler={handleUpdate} bookShelfHeader={"Read"}/>
+            <BookShelf currentList={bookList} filteredBookList={currentlyReadingList} updateHandler={handleUpdate} bookShelfHeader={"Currently Reading"}/>
+            <BookShelf currentList={bookList} filteredBookList={wantToReadList} updateHandler={handleUpdate} bookShelfHeader={"Want to Read"}/>
+            <BookShelf currentList={bookList} filteredBookList={readList} updateHandler={handleUpdate} bookShelfHeader={"Read"}/>
         </div>
                         
     )

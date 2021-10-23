@@ -2,12 +2,13 @@ import {RESPONSIVE} from "./../../constants"
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import BookDisplay from "./BookDisplay";
-function BookShelf({bookShelfHeader, filteredBookList, updateHandler}){
+function BookShelf({bookShelfHeader, filteredBookList, updateHandler, currentList}){
     console.log("Book List being passed down to Shelf: ", filteredBookList)
     function handleUpdate(){
         updateHandler();
+
     }
-    const books = filteredBookList.map(book => <BookDisplay key={book.id} updateHandler={handleUpdate} book={book}/>);
+    const books = filteredBookList.map(book => <BookDisplay key={book.id} updateHandler={handleUpdate} currentList={currentList} book={book}/>);
     return(
         <div>
             <div className="container-fluid">

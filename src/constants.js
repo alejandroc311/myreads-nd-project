@@ -24,3 +24,5 @@ export const RESPONSIVE = {
   export const CURRENTLY_READING = "currentlyReading";
   export const WANT_TO_READ = "wantToRead";
   export const READ = "read";
+  export const NONE = "none";
+  export const BOOK_SHELF_OPTIONS = [CURRENTLY_READING, WANT_TO_READ, READ, NONE];

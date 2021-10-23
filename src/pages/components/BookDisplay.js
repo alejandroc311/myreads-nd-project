@@ -1,4 +1,6 @@
-function BookDisplay({book:{imageLinks: {smallThumbnail} = "", title, authors = [], shelf = "none"}}){
+import BookDisplaySelectMenu from "./bookDisplayComponents/BookDisplaySelectMenu";
+
+function BookDisplay({book:{imageLinks: {smallThumbnail} = "", title, authors = [], shelf = "none", id}, currentList, updateHandler}){
     function getAuthorsList() {
         return(authors.length == 0 ? 
             <div className="card-text">{"No Author Available"}</div>
@@ -9,6 +11,9 @@ function BookDisplay({book:{imageLinks: {smallThumbnail} = "", title, authors = 
                 );
             })
         );
+    }
+    function handleUpdate(){
+        updateHandler();
     } 
     //ADD dropdown menu to select options. 
     return(
@@ -19,7 +24,7 @@ function BookDisplay({book:{imageLinks: {smallThumbnail} = "", title, authors = 
                 {getAuthorsList()}
             </div>
             <div className="card-footer">
-                <button className="btn bi bi-three-dots dropdown-toggle"></button>
+                <BookDisplaySelectMenu updateHandler={handleUpdate} currentList={currentList} shelf={shelf} id={id}/>
             </div>
         </div>
     );
