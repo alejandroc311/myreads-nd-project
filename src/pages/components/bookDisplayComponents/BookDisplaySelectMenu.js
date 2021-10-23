@@ -14,10 +14,10 @@ function BookDisplaySelectMenu({id:bookObjectId, shelf:bookObjectShelf, currentL
     function handleUpdate(){
         updateHandler();
     }
-    const bookDisplaySelectMenuItems = BOOK_SHELF_OPTIONS.map((option) => {
+    const bookDisplaySelectMenuItems = BOOK_SHELF_OPTIONS.map((option, index) => {
         return(
             bookObjectShelf == option ? 
-                <div key={bookObjectId} className="dropdown-item container-fluid">
+                <div key={bookObjectId+index} className="dropdown-item container-fluid">
                     <div className="row d-flex align-items-center">
                         <div className="col-2">
                             <button onClick={() => {update({id:bookObjectId}, option); handleUpdate()}} className="btn bi bi-check-square"></button>
@@ -28,7 +28,7 @@ function BookDisplaySelectMenu({id:bookObjectId, shelf:bookObjectShelf, currentL
                     </div>
                 </div>
             :
-                <div className="dropdown-item container-fluid">
+                <div key={bookObjectId+index} className="dropdown-item container-fluid">
                     <div className="row d-flex align-items-center">
                         <div className="col-2">
                             <button onClick={() => {update({id:bookObjectId}, option).then((results) => handleUpdate())}} className="btn bi bi-square"></button>
