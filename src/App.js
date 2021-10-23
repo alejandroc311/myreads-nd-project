@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import HomePage from "./pages/HomePage";
 import SearchPage from "./pages/SearchPage";
 import './App.css';
-import { get, getAll,update } from "./BooksAPI";
+import { getAll} from "./BooksAPI";
 
 function  App() {
   

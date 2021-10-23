@@ -18,7 +18,7 @@ function BookDisplay({book:{imageLinks: {smallThumbnail} = "", title, authors = 
     //ADD dropdown menu to select options. 
     return(
         <div className="card">
-            <img className="card-img-top" src={smallThumbnail}></img>
+            <img className="card-img-top" src={smallThumbnail} alt={"Background thumbnail for book"}></img>
             <div className="card-body">
                 <div className="card-title">{"Title: " + title}</div>
                 {getAuthorsList()}

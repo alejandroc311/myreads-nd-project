@@ -8,7 +8,7 @@ function BookDisplaySelectMenu({id:bookObjectId, shelf:bookObjectShelf, currentL
     //If the id of the current element of the iterated booklist is the same as the book that was passed into the BookDisplay
     //Then the shelf of the book that was passed into the BookDisplay will be set to that of the element of the iterated user's current booklist
     //This is done to ensure that search results that match entries of the user's current booklist are assigned the correct shelf.
-    currentList.map(({id, shelf:currentListShelf}) => { 
+    currentList.map(({id, shelf:currentListShelf}) => {
         id == bookObjectId ? bookObjectShelf = currentListShelf : bookObjectShelf = bookObjectShelf
     });
     function handleUpdate(){
